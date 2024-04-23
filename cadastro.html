@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <form onsubmit="return salvar()">
+        <h2>Cadastro de Usuário</h2>
+        <label for="nome">Nome:</label>
+        <input id="nome" required type="text" minlength="3" maxlength="11"/>
+        <br><br>
+        <label for="email">Email:</label>
+        <input id="email" required type="text" minlength="5" maxlength="30"/>
+        <br><br>
+        <button>Salvar</button>   
+    </form>
+
+<div id="tabelaCadastro"></div>
+<script src="./index.js"></script>
+<br>
+<a href="./telaInicio.html"><button>Voltar</button></a>
+<a href="./consulta.html"><button>Consulta</button></a>
+
+</body>
+</html>
