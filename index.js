@@ -1,5 +1,5 @@
-const nomeInput = document.getElementById('nome');
-const emailInput = document.getElementById('email');
+const usuarioInput = document.getElementById('usuario');
+const senhaInput = document.getElementById('senha');
 const tabelaCadastro = document.getElementById('tabelaCadastro');
 
 const pessoas = pegaPessoasCadastradas();
@@ -9,8 +9,8 @@ for(const pessoa of pessoas) {
 
 function salvar() {
     const pessoa = {};
-    pessoa.nome = nomeInput.value;
-    pessoa.email = emailInput.value;
+    pessoa.usuario = usuarioInput.value;
+    pessoa.senha = senhaInput.value;
     const pessoasCadastradas = pegaPessoasCadastradas();
     pessoasCadastradas.push(pessoa);
     localStorage.setItem('pessoasCadastro', JSON.stringify(pessoasCadastradas));
@@ -29,8 +29,8 @@ function pegaPessoasCadastradas() {
 function mostraPessoa(cadastros) {
     const paragrafo = document.createElement('p');
     paragrafo.innerHTML += `
-        <span>${cadastros.nome}</span>
-        <span>${cadastros.email}</span>
+        <span>${cadastros.usuario}</span>
+        <span>${cadastros.senha}</span>
     `;
     tabelaCadastro.append(paragrafo);
 }

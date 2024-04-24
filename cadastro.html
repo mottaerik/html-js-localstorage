@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+
+<body style="background-color: rgb(138, 138, 138); font-family: Arial; display: flex; justify-content: center ;align-items: center; height: 100vh; margin: 0;">
     <form onsubmit="return salvar()">
         <h2>Cadastro de Usuário</h2>
-        <label for="nome">Nome:</label>
-        <input id="nome" required type="text" minlength="3" maxlength="11"/>
+        <label for="usuario">Usuário</label>
+        <input id="usuario" required type="text" minlength="3" maxlength="150"/>
         <br><br>
-        <label for="email">Email:</label>
-        <input id="email" required type="text" minlength="5" maxlength="30"/>
+        <label for="senha">Senha:</label>
+        <input id="senha" required type="password"/>
         <br><br>
-        <button>Salvar</button>   
+        <button class="botao2">Salvar</button>
     </form>
 
-<div id="tabelaCadastro"></div>
-<script src="./index.js"></script>
-<br>
-<a href="./telaInicio.html"><button>Voltar</button></a>
-<a href="./consulta.html"><button>Consulta</button></a>
+    <a href="./telaInicio.html"><button class="botao3">Voltar</button></a>
+    <a href="./consulta.html"><button class="botao3">Consulta</button></a>
+    
+    <footer>
+        <a href="https://github.com/mottaerik" class="botao2">Clique aqui para acessar meu GitHub</a>
+    </footer>
 
+    <div id="tabelaCadastro"></div>
+    <script src="./index.js"></script>
 </body>
 </html>
